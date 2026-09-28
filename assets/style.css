@@ -272,7 +272,7 @@ button,
   inset: 0;
   background:
     linear-gradient(90deg, rgba(15,24,35,.88) 0%, rgba(15,24,35,.63) 42%, rgba(15,24,35,.20) 77%, rgba(15,24,35,.28) 100%),
-    url("hero.jpg") center/cover no-repeat;
+    url("hero-oil-gas-construction.png") center/cover no-repeat;
   transform: scale(1.03);
   animation: heroSlowZoom 16s ease-in-out infinite alternate;
 }
@@ -445,7 +445,7 @@ button,
 }
 
 .home-services .service-grid {
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .service-card {
@@ -466,7 +466,7 @@ button,
 }
 
 .home-services .service-card img {
-  height: 115px;
+  height: 175px;
 }
 
 .service-card-content {
@@ -484,7 +484,7 @@ button,
 }
 
 .home-services .service-card h3 {
-  font-size: .92rem;
+  font-size: 1.04rem;
 }
 
 .service-card p {
@@ -493,7 +493,7 @@ button,
 }
 
 .home-services .service-card p {
-  font-size: .78rem;
+  font-size: .86rem;
 }
 
 /* -------------------------
@@ -1369,4 +1369,56 @@ textarea.form-control {
   .contact-form {
     padding: 22px;
   }
+}
+
+/* Company-profile service presentation */
+.profile-service-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+}
+.profile-service-grid .service-card {
+  scroll-margin-top: 100px;
+}
+.profile-service-grid .service-card img {
+  height: 260px;
+}
+.profile-service-grid .service-card-content {
+  padding: 26px;
+}
+.profile-service-grid .service-card h3 {
+  font-size: 1.35rem;
+}
+.service-points {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: .88rem;
+}
+.service-points li {
+  padding-left: 18px;
+  position: relative;
+}
+.service-points li::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--red);
+  position: absolute;
+  left: 0;
+  top: .55em;
+}
+.oil-gas-card {
+  background: var(--charcoal);
+  color: var(--white);
+}
+.oil-gas-card p,
+.oil-gas-card .service-points {
+  color: rgba(255,255,255,.76);
+}
+@media (max-width: 760px) {
+  .profile-service-grid { grid-template-columns: 1fr; }
+  .profile-service-grid .service-card img { height: 220px; }
 }
